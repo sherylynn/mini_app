@@ -1,1 +1,4 @@
 <text >hello world</text>
+<button class="btn" type="primary" loading="{{loading}}" disabled="{{disabled}}" bindtap="jumpToSecond">
+  {{button_label}}
+</button>

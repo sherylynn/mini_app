@@ -1,3 +1,6 @@
 App({
-  globalData:'test'
+  globalData:'this is globalData test',
+  onLaunch:function(options){
+    console.log(options)
+  }
 })
