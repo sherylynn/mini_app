@@ -1,0 +1,17 @@
+Page({
+  data:{
+    who:{
+      name:"default_name",
+      intro:"default_intro"
+    }
+  },
+  onLoad:function(options){
+    console.log(options)
+    this.setData({
+      who:{
+        name:options.name,
+        intro:options.intro
+      }
+    })
+  }
+})

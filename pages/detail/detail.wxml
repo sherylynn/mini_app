@@ -1,0 +1,14 @@
+<template name="person">
+  <view class="intro">
+    <text >{{name}}</text>
+    <text >{{intro}}</text>
+  </view>
+</template>
+<!--
+  templates使用的时候不能用两个标签,得内部闭合
+  下面是错的
+  <template is="person"></template>
+  正确的是
+  <template is="person" />
+ -->
+<template is="person" data="{{...who}}"></template>

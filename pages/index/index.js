@@ -2,7 +2,8 @@ var globalData=getApp()
 console.log(globalData.globalData)
 Page({
   data:{
-    button_label:"未点击"
+    button_label:"未点击",
+    detail_label:"详情页面"
   },
   onLoad:(options)=>{
     console.log("index is loaded"),
@@ -21,7 +22,7 @@ Page({
       */
       url: '/pages/secondPage/second',
       success: (result) => {
-        console.log(已经切换)
+        console.log("已经切换")
       },
       fail: (result) => {
         console.log(result)
@@ -31,10 +32,19 @@ Page({
       
     //应该是切换tab
     /*
-    wx.navigateTo({
-      url: 'pages/secondPage/second?id=2',
-    });
+    
     */
+  },
+  toDetail:()=>{
+    wx.navigateTo({
+      url: '/pages/detail/detail?name=lin&intro= is good man',
+      success:(result)=>{
+        console.log("go to detail")
+      },
+      fail:(result)=>{
+        console.log(result)
+      }
+    });
   },
   onShareAppMessage:()=>{
     return{

@@ -2,3 +2,6 @@
 <button class="btn" type="primary" loading="{{loading}}" disabled="{{disabled}}" bindtap="jumpToSecond">
   {{button_label}}
 </button>
+<button class="btn" type="primary" loading="{{loading}}" disabled="{{disabled}}" bindtap="toDetail">
+  {{detail_label}}
+</button>
