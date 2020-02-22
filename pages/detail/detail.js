@@ -13,5 +13,18 @@ Page({
         intro:options.intro
       }
     })
+    wx.showToast({
+      title: 'detail_page',
+      icon: 'success',
+      image: '',
+      duration: 1500,
+      mask: false,
+      success: (result) => {
+        
+      },
+      fail: () => {},
+      complete: () => {}
+    });
+      
   }
 })
