@@ -3,7 +3,9 @@ console.log(globalData.globalData)
 Page({
   data:{
     button_label:"未点击",
-    detail_label:"详情页面"
+    detail_label:"详情页面",
+    loading:false
+
   },
   onLoad:(options)=>{
     console.log("index is loaded"),
@@ -11,7 +13,7 @@ Page({
   },
   //下面不能用箭头函数，会把this给覆盖掉
   jumpToSecond:function(){
-    console.log("click button"),
+    console.log(this),
     this.setData({
       button_label:"已经点击"
     })
@@ -23,6 +25,7 @@ Page({
       url: '/pages/secondPage/second',
       success: (result) => {
         console.log("已经切换")
+        console.log(this)
       },
       fail: (result) => {
         console.log(result)
@@ -35,10 +38,12 @@ Page({
     
     */
   },
-  toDetail:()=>{
+  toDetail:function(){
+    this.setData({loading:true})
     wx.navigateTo({
       url: '/pages/detail/detail?name=lin&intro= is good man',
       success:(result)=>{
+        this.setData({loading:false})
         console.log("go to detail")
       },
       fail:(result)=>{
