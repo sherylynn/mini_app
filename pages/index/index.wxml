@@ -5,3 +5,6 @@
 <button class="btn" type="primary" loading="{{loading}}" disabled="{{disabled}}" bindtap="toDetail">
   {{detail_label}}
 </button>
+<button class="btn" type="primary" loading="{{loading}}" disabled="{{disabled}}" bindtap="toList">
+  {{list_label}}
+</button>

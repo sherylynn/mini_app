@@ -16,6 +16,10 @@ Page({
           this.setData({
             check:true
           })
+        }else if(result.cacel){
+          this.setData({
+            check:false
+          })
         }
       },
       fail: () => {},

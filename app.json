@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/secondPage/second",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/list/list"
   ],
   "tabBar":{
     "list":[{

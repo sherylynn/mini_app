@@ -4,6 +4,7 @@ Page({
   data:{
     button_label:"未点击",
     detail_label:"详情页面",
+    list_label:"列表页面",
     loading:false
 
   },
@@ -50,6 +51,11 @@ Page({
         console.log(result)
       }
     });
+  },
+  toList:function(){
+    wx.navigateTo({
+      url: '/pages/list/list?name=lin&intro= is good man',
+    })
   },
   onShareAppMessage:()=>{
     return{

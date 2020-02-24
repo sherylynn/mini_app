@@ -1,0 +1,10 @@
+<template name="car_list">
+<view class="car_list" >
+<text >{{name}}</text>
+<text >{{info}}</text>
+</view>
+</template>
+
+<view wx:for="{{cars}}" wx:for-item="car">
+  <template is="car_list" data="{{...car}}"></template>
+</view>
